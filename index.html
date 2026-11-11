@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Perú - Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Tech<span>Store</span></h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" onclick="mostrarSeccion('inicio')"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                <li><a href="#" onclick="mostrarSeccion('productos')"><i class="fa-solid fa-box-open"></i> Productos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('nosotros')"><i class="fa-solid fa-circle-info"></i> Nosotros</a></li>
+                <li><a href="#" onclick="mostrarSeccion('contacto')"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="btn-primary" id="btn-promocion">¡Oferta Especial!</button>
+    </header>
+
+    <!-- CONTENEDOR DE SECCIONES (CAMBIO DINÁMICO) -->
+    
+    <!-- SECCIÓN INICIO -->
+    <section id="seccion-inicio" class="contenido-seccion">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Tecnología de Vanguardia en Perú</h1>
+                <p>Encuentra los mejores smartphones, laptops y accesorios con envíos a todo Lima y provincias.</p>
+                <button class="btn-secondary" onclick="mostrarSeccion('productos')">Ver Catálogo Completo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PRODUCTOS -->
+    <section id="seccion-productos" class="contenido-seccion" style="display: none;">
+        <div class="productos">
+            <h2>Catálogo de Productos Destacados</h2>
+            <div class="grid-productos">
+                <!-- Producto 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=500" alt="Smartphone">
+                    </div>
+                    <h3>Smartphone Pro Max</h3>
+                    <p>Pantalla AMOLED 120Hz y cámara de 108 MP.</p>
+                    <span class="precio">S/ 3,390.00 <small>($899.00 USD)</small></span>
+                    <button class="btn-card" onclick="alert('¡Producto agregado al carrito!')">Comprar Ahora</button>
+                </div>
+                <!-- Producto 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=500" alt="Laptop">
+                    </div>
+                    <h3>Laptop Ultrabook Gamer</h3>
+                    <p>Intel Core i7, 16GB RAM, SSD 512GB.</p>
+                    <span class="precio">S/ 4,890.00 <small>($1,299.00 USD)</small></span>
+                    <button class="btn-card" onclick="alert('¡Producto agregado al carrito!')">Comprar Ahora</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500" alt="Audífonos">
+                    </div>
+                    <h3>Audífonos Wireless ANC</h3>
+                    <p>Cancelación de ruido activa y alta fidelidad.</p>
+                    <span class="precio">S/ 750.00 <small>($199.00 USD)</small></span>
+                    <button class="btn-card" onclick="alert('¡Producto agregado al carrito!')">Comprar Ahora</button>
+                </div>
+                <!-- Producto 4 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=500" alt="Smartwatch">
+                    </div>
+                    <h3>Smartwatch Sport Edition</h3>
+                    <p>Monitoreo cardíaco, GPS integrado y sumergible.</p>
+                    <span class="precio">S/ 560.00 <small>($149.00 USD)</small></span>
+                    <button class="btn-card" onclick="alert('¡Producto agregado al carrito!')">Comprar Ahora</button>
+                </div>
+                <!-- Producto 5 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=500" alt="Teclado Mecánico">
+                    </div>
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>Switches mecánicos táctiles y retroiluminación LED.</p>
+                    <span class="precio">S/ 340.00 <small>($89.00 USD)</small></span>
+                    <button class="btn-card" onclick="alert('¡Producto agregado al carrito!')">Comprar Ahora</button>
+                </div>
+                <!-- Producto 6 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=500" alt="Mouse Gamer">
+                    </div>
+                    <h3>Mouse Óptico Gamer 16K</h3>
+                    <p>Sensor de alta precisión y botones programables.</p>
+                    <span class="precio">S/ 220.00 <small>($59.00 USD)</small></span>
+                    <button class="btn-card" onclick="alert('¡Producto agregado al carrito!')">Comprar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NOSOTROS (RESUMEN DE LA PÁGINA) -->
+    <section id="seccion-nosotros" class="contenido-seccion" style="display: none;">
+        <div class="about-container">
+            <h2>Acerca de TechStore Perú</h2>
+            <div class="about-card">
+                <h3><i class="fa-solid fa-store"></i> Resumen de la Empresa</h3>
+                <p><strong>TechStore</strong> es una plataforma e-commerce moderna diseñada para ofrecer soluciones tecnológicas de alta gama en todo el Perú. Nos especializamos en acercar dispositivos de última generación con garantía directa, pasarelas de pago seguras y atención personalizada para cada cliente.</p>
+                <br>
+                <p>Nuestra misión es facilitar el acceso a la innovación digital con precios competitivos tanto en Soles como en Dólares, garantizando entregas rápidas y eficientes a nivel nacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="seccion-contacto" class="contenido-seccion" style="display: none;">
+        <div class="contact-container">
+            <h2>Contacto y Soporte</h2>
+            <div class="contact-card">
+                <p><i class="fa-solid fa-phone"></i> <strong>Teléfono de Atención:</strong> +51 987 654 321</p>
+                <p><i class="fa-solid fa-envelope"></i> <strong>Correo Electrónico:</strong> contacto@techstoreperu.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> <strong>Dirección Principal:</strong> Av. Industrial 450, Lima, Perú</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 TechStore Perú - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón Flotante Informativo -->
+    <div class="floating-btn" id="floatingBtn">
+        <i class="fa-solid fa-headset"></i>
+        <span class="tooltip">¿Dudas? Chatea con nosotros</span>
+    </div>
+
+    <!-- Modal de Información del Botón Flotante -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h3>Atención al Cliente Perú</h3>
+            <p>Comunícate de manera inmediata con nuestro asesor de ventas a través de WhatsApp:</p>
+            <p class="phone-number"><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+            <a href="https://wa.me/51987654321" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Abrir Chat WhatsApp</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
